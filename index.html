@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>量谷科技</title>
+        <style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: "微软雅黑";
+			}
+			li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+				color:#000000;
+			}
+			img{
+				display:block;
+			}
+			h2,h3{
+				font-weight:normal;
+			}
+
+			.gWidth{
+				width:1000px;
+				margin:0 auto;
+				background:#F6F6F6;
+			}
+			.clearfix::after{
+				content:'';
+				display:block;
+				clear:both;
+			}
+			.fl{
+				float: left;
+			}
+			.fr{
+				float: right;
+			}
+			.top{
+				width:1440px;
+				height:40px;
+				background:#3A3D41;
+			}
+			.top p{
+				width: 184px;
+				height: 30px;
+				font-size:12px;
+				color:#fff;
+				line-height:30px;
+				background:url("images/top3.png") right center no-repeat;
+				border-bottom:2px solid #FFB243;
+				margin-right:220px;
+				padding-top:5px;
+			}
+			.top img.img1{
+				position: absolute;
+				right:340px;
+				top:12px;
+			}			
+			.top img.img2{
+				position: absolute;
+				right:310px;
+				top:12px;
+			}
+			.nav{
+				height:100px;
+				background:#fff;
+				line-height:100px;
+			}
+			.nav ul{
+				padding-left: 250px;
+				background:url("images/nav1.png") left center no-repeat;
+			}
+			.nav ul a{
+				display:inline-block;
+				text-align:center;
+				width:105px;
+				font-size:16px;
+			}
+			.nav ul a.act,.nav ul a:hover{
+				color:#fff;
+				background:url("images/nav2.png") no-repeat;
+			}
+			.cont1,.cont3,.cont5{
+				width:1440px;
+				height:300px;
+				background:#F6F6F6;
+				position: relative;
+			}
+			.cont1 .d1{
+				width:308px;
+				height:300px;
+				background:#2361AD;
+				position: relative;
+				top:-30px;
+				margin-right: 30px;
+			}
+			.cont1 .d3{
+				margin-right:0;
+			}
+			.cont1 .d1 img{
+				padding:58px 110px;
+			}
+			.cont1 .d1 .d{
+				height:90px;
+				line-height:88px;
+				text-align:center;
+				font-size:18px;
+				color:#434343;
+				background:#fff;
+			}
+			.cont1 .act{
+				background-color:#fff;
+			}
+			.cont1 .d1 .img1:hover{	
+				z-index:10;			
+				background:url("images/cont1-21.png") no-repeat 120px center #fff ;
+			}
+			.cont1 .d1 .img2:hover{	
+				z-index:10;			
+				background:url("images/cont1-31.png") no-repeat 120px center #fff ;
+			}
+			.cont1 .fr{
+				position: relative;
+				top:30px;
+			}
+			.cont1 .fr .gb{
+				margin-bottom:5px;
+			}
+			.cont2{
+				padding-left: 220px;
+			}
+			.cont2 h2,.cont3 h2,.cont4 h2{
+				height:76px;
+				line-height:76px;
+				font-size:20px;
+				color:#2361AD;
+				background:#fff;
+			}
+			.cont2 h2 span,.cont3 h2 span,.cont4 h2 span{
+				padding-left:27px;
+				color:#999999;
+			}
+			.cont2 .d1{
+				width: 65px;
+				height: 334px;
+				background:#00007F;
+			}
+			.cont2 .d2{
+				padding-left:2px;
+				background:#EE8800;
+			}			
+			.cont2 .d3{
+				background:#7F7F00;
+			}
+			.cont2 .d4{
+				background:#2361AD;
+			}
+			.cont2 .d1 p{
+				line-height:30px;
+				text-align:center;
+				font-size:20px;
+				color:#fff;
+				padding-left:20px;
+				padding-right:20px;
+				padding-top:91px;
+			}
+			.cont2 ul{
+				width:426px;
+			}
+			.cont2 ul a{
+				font-size:12px;
+				color:#272727;
+				line-height:30px;
+				background:url("images/cont2-2.png") 15px center no-repeat;
+				padding-left: 21px;
+			}.cont2 ul span{
+				font-size:12px;
+				color:#272727;
+				line-height:30px;
+				float: right;
+			}
+			.cont3 {
+				height:414px;
+				background:#F6F6F6;
+			}
+			.cont3 h2{
+				background:#F6F6F6;
+			}
+			.cont3 .text{
+				width:438px;
+				height:107px;
+				margin-right:60px;
+				border-bottom:1px dashed #999999;
+			}
+			.cont3 .text .p1{
+				font-size:14px;
+				color:#656565;
+				line-height:30px;
+				margin-bottom:6px;
+			}
+			.cont3 .text .p2{
+				font-size:12px;
+				color:#777777;
+				line-height:22px;
+			}
+			.cont3 .text .act,.cont3 .text .p1:hover{
+				color:#2361AD;
+				cursor:pointer;
+			}
+			.cont4{
+				padding-left: 220px;
+				background:#fff;
+			}
+			.cont4 img{
+				background:#fff;
+				float: left;
+				margin-right:70px;
+				margin-bottom:35px;
+			}
+			.cont4 img.r{
+				margin-right: 0;
+			}
+			.cont5{
+				height:245px;
+				padding-top:15px;
+			}
+			.cont5 div.fl{
+				width: 226px;
+				height: 170px;
+			}
+			.cont5 h3{
+				font-size:18px;
+				color:#000000;
+				line-height:30px;
+			}
+			.cont5 ul a{
+				font-size:12px;
+				color:#000000;
+				line-height:30px;
+			}
+			.cont5 div.r{
+				width:312px;
+			}
+			.cont5 .r a.a1{
+				background:url("images/cont5-1.png") 8px center no-repeat;
+				padding-left:30px;
+			}
+			.cont5 .r a.a2{
+				background:url("images/cont5-2.png") 8px center no-repeat;
+				padding-left:30px;
+			}
+			.cont5 .r a.a3{
+				background:url("images/cont5-3.png") 8px center no-repeat;
+				padding-left:30px;
+			}
+			.cont5 .d2{
+				border-top:1px solid #fff;
+				padding-top:15px;
+			}
+			.cont5 .d2 a{
+				font-size:12px;
+				padding-right:16px;
+			}
+			.footer{
+				width:1440px;
+				height:65px;
+				background:#27292C;
+				font-size:12px;
+				color:#9F9F9F;
+				line-height:65px;
+				text-align:center;
+			}
+		</style>
+    </head>
+    <body>
+    	<div class="box">
+    		<div class="top">
+    			<p class="fr">搜索……</p>
+    			<img src="images/top1.png" height="16" width="16" alt="" class="img1">
+    			<img src="images/top2.png" height="16" width="16" alt="" class="img2">
+    		</div>
+
+    		<div class="nav gWidth">
+    			<ul class="clearfix">
+    				<li class="fl"><a href="###" class="act">网站首页</a></li>
+    				<li class="fl"><a href="###">技术与服务</a></li>
+    				<li class="fl"><a href="###">解决方案</a></li>
+    				<li class="fl"><a href="###">合作伙伴</a></li>
+    				<li class="fl"><a href="###">新闻动态</a></li>
+    				<li class="fl"><a href="###">关于我们</a></li>
+    			</ul>
+    		</div>
+
+    		<div class="banner">
+    			<img src="images/banner.png" height="455" width="1440" alt="">
+    		</div>
+
+    		<div class="content clearfix">
+    			<div class="cont1 clearfix">
+    				<div class="gWidth clearfix">  				
+	    				<div class=" act d1 fl">
+	    					<img src="images/cont1-1.png" height="96" width="88" alt="">
+	    					<div class="d">物联网手持终端</div>
+	    				</div>
+	    				<div class="d1 fl">
+	    					<img src="images/cont1-2.png" height="96" width="88" alt="" class="img1">
+	    					<div class="d">物联网手持终端</div>
+	    				</div>
+	    				<div class="d1 fl d3">
+	    					<img src="images/cont1-3.png" height="96" width="88" alt="" class="img2">
+	    					<div class="d">物联网手持终端</div>
+	    				</div>
+    				</div>
+	    				<div class="fr">
+	    					<img src="images/cont1-5.png" height="11" width="99" alt="" class="gb">
+	    					<img src="images/cont1-4.png" height="107" width="110" alt="">
+	    				</div>
+    			</div>
+
+    			<div class="cont2 clearfix">
+    				<div class="d">
+    					<h2>解决方案<span>SOLUTIONS</span></h2>
+    					<div class="d1 fl">
+    						<p>交通行业</p>
+    					</div> 
+    					<img src="images/cont2-1.png" height="334" width="312" alt="" class="fl">
+    					<ul class="fl">
+    						<li><a href="###">军用物资组套仓储管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">集装箱电子铅封管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">军用物资组套仓储管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">集装箱电子铅封管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">军用物资组套仓储管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">集装箱电子铅封管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">集装箱电子铅封管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">集装箱电子铅封管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">军用物资组套仓储管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">军用物资组套仓储管理系统</a><span>[ 2014-03-17 ]</span></li>
+    						<li><a href="###">集装箱电子铅封管理系统</a><span>[ 2014-03-17 ]</span></li>
+    					</ul>
+    					<div class="d1 d2 fl">
+    						<p>司法行业</p>
+    					</div>
+    					<div class="d1 d3 fl">
+    						<p>政府相关行业</p>
+    					</div>
+    					<div class="d1 d4 fl">
+    						<p>其他行业</p>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class="cont3 clearfix">
+    				<div class="gWidth">
+    					<h2>新闻动态<span>NEWS</span></h2>
+						<div class="text fl">
+							<p class="p1 act">青岛量谷无线科技有限公司（简称量谷科技）</p>
+							<p class="p2">公司秉承引领前沿信息、创新突破，自强务实的企业理念，不断地吸收借鉴国外先进技术并积极开展自主创新的研究。</p>
+						</div>
+						<div class="text fl">
+							<p class="p1">青岛量谷无线科技有限公司（简称量谷科技）</p>
+							<p class="p2">公司秉承引领前沿信息、创新突破，自强务实的企业理念，不断地吸收借鉴国外先进技术并积极开展自主创新的研究。</p>
+						</div>
+						<div class="text fl">
+							<p class="p1">青岛量谷无线科技有限公司（简称量谷科技）</p>
+							<p class="p2">公司秉承引领前沿信息、创新突破，自强务实的企业理念，不断地吸收借鉴国外先进技术并积极开展自主创新的研究。</p>
+						</div>
+						<div class="text fl">
+							<p class="p1">青岛量谷无线科技有限公司（简称量谷科技）</p>
+							<p class="p2">公司秉承引领前沿信息、创新突破，自强务实的企业理念，不断地吸收借鉴国外先进技术并积极开展自主创新的研究。</p>
+						</div>
+						<div class="text fl">
+							<p class="p1">青岛量谷无线科技有限公司（简称量谷科技）</p>
+							<p class="p2">公司秉承引领前沿信息、创新突破，自强务实的企业理念，不断地吸收借鉴国外先进技术并积极开展自主创新的研究。</p>
+						</div>
+						<div class="text fl">
+							<p class="p1">青岛量谷无线科技有限公司（简称量谷科技）</p>
+							<p class="p2">公司秉承引领前沿信息、创新突破，自强务实的企业理念，不断地吸收借鉴国外先进技术并积极开展自主创新的研究。</p>
+						</div>
+    				</div>
+    			</div>
+
+    			<div class="cont4">
+    				<div class=" clearfix"> 				
+    					<h2>新合作伙伴<span>PARTNERS</span></h2>
+    					<img src="images/cont4-1.png" height="51" width="143" alt="">
+    					<img src="images/cont4-2.png" height="51" width="143" alt="">
+    					<img src="images/cont4-3.png" height="51" width="143" alt="">
+    					<img src="images/cont4-4.png" height="51" width="143" alt="">
+    					<img src="images/cont4-5.png" height="51" width="143" alt="" class="r">
+    				</div>
+    			</div>
+
+    			<div class="cont5">
+    				<div class="gWidth clearfix">
+	    				<div class="d1 clearfix">
+	    					<div class="fl">   			
+						    <h3>产品中心</h3>
+							    <ul>
+									<li><a href="#">手持终端</a></li>
+									<li><a href="#">产品线</a></li>
+									<li><a href="#">附件</a></li>
+									<li><a href="#">软件</a></li>
+									</ul>
+							</div> 
+
+		    				<div class="fl">   			
+							<h3>技术与服务</h3>
+							    <ul>
+									<li><a href="#">技术支持</a></li>
+									<li><a href="#">售后服务</a></li>
+								</ul>
+							</div> 
+
+	    					<div class="fl">   			
+						   	<h3>解决方案</h3>
+							    <ul>
+									<li><a href="#">交通行业</a></li>
+									<li><a href="#">司法行业</a></li>
+									<li><a href="#">政府相关行业</a></li>
+									<li><a href="#">其他行业</a></li>
+								</ul>
+							</div> 
+
+	    					<div class="fl r">   			
+						    <h3>联系方式</h3>
+							    <ul>
+									<li><a href="#" class="a1">电话：0532-83887966 / 83887967</a></li>
+									<li><a href="#" class="a2">邮箱：Services@langcoo.com</a></li>
+									<li><a href="#" class="a3">微信：青岛量谷无线科技</a></li>
+								</ul>
+							</div> 
+						</div>
+    					<div class="d2">
+    						<strong>友情链接：</strong><a href="#">物联中国</a><a href="#">物联网世界</a><a href="#">青岛市江苏商会 </a><a href="#">青岛物联网协会</a>
+    					</div>
+    				</div>
+    			</div>    			
+    		</div>
+    		
+    		<div class="footer">
+    			<p>&copy;2014 版权所有 青岛量谷无线科技有限公司 Qingdao Langcoo Wireless Technologies Co.,Ltd         地址：青岛市市南区芝泉路6号        电话：0755-83316336 </p>
+    		</div>
+    	</div>
+    </body>
+</html>
